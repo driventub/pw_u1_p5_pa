@@ -1,0 +1,28 @@
+* {
+
+    text-align: center;
+}
+
+h3 {
+    color: #582C4D;
+}
+
+#idTitulo {
+    color: #A26769;
+}
+
+.amarillo {
+    color: yellow;
+    border: #582C4D 10px solid;
+}
+
+img[src$=".png"] {
+    width: 200px;
+    height: 200px;
+    border: chocolate;
+    border-radius: 20px;
+}
+
+h6:hover {
+    color: blue;
+}
