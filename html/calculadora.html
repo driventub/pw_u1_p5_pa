@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Test</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mi calculadora</h1>
+    </header>
+    <nav></nav>
+    <section>
+        <label for="idNumero1">Numero 1: </label>
+        <input id="idNumero1" type="number">
+        <label for="idNumero2">Numero 2: </label>
+        <input id="idNumero2" type="number">
+        <button onclick="document.getElementById('idNumero1').style.color = 'blue' ">Cambiar Estilo 1</button>
+        <button onclick="document.getElementById('idNumero2').style.background = 'yellow' ">Cambiar Estilo 2</button>
+        <button onclick="document.getElementById('res').innerHTML = 1+6">Presentar Resultado</button>
+        <label id="res" for=""></label>
+        
+        <button onclick="document.getElementById('idDiv').innerHTML = '<button>Hola</button>'">Agregar Elemento</button>
+        <div id="idDiv">
+            <!-- <button>Hola</button> -->
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png"
+                alt="DOM html" style="height: 100px; width:100px;" 
+                id="img1"
+                />
+
+            <button onclick="document.getElementById('img1').src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/2023_Obsidian_logo.svg/1200px-2023_Obsidian_logo.svg.png' ">Cambiar imagen</button>
+
+
+        </div>
+
+    </section>
+    <footer>Todos los derechos reservados</footer>
+</body>
+</html>
