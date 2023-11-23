@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Test</title>
+
+    <script src="../js/calculadoraFunciones.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Mi calculadora</h1>
+    </header>
+    <nav></nav>
+    <section>
+        <label for="idNumero1">Numero 1: </label>
+        <input id="idNumero1" type="number">
+        <label for="idNumero2">Numero 2: </label>
+        <input id="idNumero2" type="number">
+        <label id="res" for=""></label>
+        
+        <button onclick="document.getElementById('idDiv').innerHTML = '<button>Hola</button>'">Agregar Elemento</button>
+        <div id="idDiv">
+            <!-- <button>Hola</button> -->
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/1200px-DOM-model.svg.png"
+                alt="DOM html" style="height: 100px; width:100px;" 
+                id="img1"
+                />
+
+            <button onclick="cambiarImagen()">Cambiar imagen</button>
+
+
+
+        </div>
+
+        <h2>JS Externo</h2>
+        
+        <button onclick="sumarNumeroCompleto()">SUMAR Completo</button>
+        <label id="idResSumar" for=""></label>
+
+        <button onclick="restar()">SUMAR Completo</button>
+        <label id="idResRestar" for=""></label>
+
+        <button onclick="multiplicar()">SUMAR Completo</button>
+        <label id="idResMultiplicar" for=""></label>
+
+        <button onclick="dividir()">SUMAR Completo</button>
+        <label id="idResDividir" for=""></label>
+
+    </section>
+    <footer>Todos los derechos reservados</footer>
+</body>
+</html>
