@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
     <script src="../js/calcTarea.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="../css/tarea.css" />
+  </head>
+
+  <body>
     <header></header>
     <nav></nav>
-    <section>
-        <div>
-            <button onclick="agregarNumero(0)">0</button>
+    <div class="container">
+      <div class="calculadora-general">
+        <section>
+          <div class="calculadora-num">
             <button onclick="agregarNumero(1)">1</button>
             <button onclick="agregarNumero(2)">2</button>
             <button onclick="agregarNumero(3)">3</button>
@@ -21,21 +24,23 @@
             <button onclick="agregarNumero(7)">7</button>
             <button onclick="agregarNumero(8)">8</button>
             <button onclick="agregarNumero(9)">9</button>
-        </div>
+            <button class="col-3" onclick="agregarNumero(0)">0</button>
 
-        <div>
+            <!-- <label for="">Respuesta: </label> -->
+          </div>
+
+          <div class="calculadora-op">
             <button onclick="agregarSigno('+')">+</button>
             <button onclick="agregarSigno('-')">-</button>
             <button onclick="agregarSigno('*')">*</button>
             <button onclick="agregarSigno('/')">/</button>
-            <button onclick="resultado()">Resultado</button>
-        </div>
-
-        <div>
-            <label for="">Respuesta: </label>
+            <button class="col-2" onclick="resultado()">Resultado</button>
             <label id="idRes" for=""></label>
-        </div>
-    </section>
+          </div>
+        </section>
+      </div>
+    </div>
+
     <footer></footer>
-</body>
+  </body>
 </html>
