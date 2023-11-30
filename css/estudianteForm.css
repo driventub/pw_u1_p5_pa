@@ -1,0 +1,79 @@
+body {
+  /* background-color: #59ABE3; */
+  background-color: #0077b6;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 340px;
+  height: 450px;
+  /* background-color: #e6e6e6; */
+  background-color: #caf0f8;
+
+  border-radius: 8px;
+  padding: 20px 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-shadow: 0 0 40px -10px #000;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: xx-large;
+}
+
+h2 {
+  margin: 10px 0px;
+  padding-bottom: 10px;
+  width: 180px;
+  /* color: #78788C; */
+  color: #03045e;
+  /* border-bottom: 3px solid #78788C; */
+  border-bottom: 3px solid #03045e;
+}
+
+p::before {
+  content: attr(type);
+  display: block;
+  margin: 10px 2px;
+  font-size: 18px;
+  color: #5a5a5a;
+}
+
+input {
+  width: 100%;
+  border: 0;
+  /* border-bottom: 2px solid #bebed2; */
+  border-bottom: 2px solid #90e0ef;
+  background: none;
+}
+
+input:hover,
+input:focus {
+  /* border-bottom: 3px solid #78788c; */
+  border-bottom: 3px solid #00b4d8;
+  outline: none;
+}
+
+input:hover{
+    cursor: cell;
+}
+
+button {
+  border-radius: 8px;
+  box-shadow: 1px 3px 3px 3px;
+  cursor: pointer;
+  background-color: #00b4d8;
+  color: #caf0f8;
+  font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #0077b6;
+}
