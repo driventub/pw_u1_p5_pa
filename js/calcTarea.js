@@ -1,9 +1,20 @@
 var operacion = "";
 
+const mostrar = () => {
+  document.getElementById("idRes").innerHTML = operacion;
+};
+
+const quitar = () => {
+  // operacion = operacion.substring(0, operacion.length() - 1);
+  operacion = operacion.slice(0, operacion.length - 1);
+  console.log(operacion);
+  mostrar();
+};
 function agregarNumero(valor) {
   console.log(valor);
   console.log(operacion);
   operacion = operacion.concat(valor);
+  mostrar();
 }
 
 function agregarSigno(valor) {
@@ -15,6 +26,7 @@ function agregarSigno(valor) {
   }
 
   operacion = operacion.concat(valor);
+  mostrar();
 }
 
 function resultado() {
@@ -33,5 +45,10 @@ function resultado() {
 }
 
 function chequear(char) {
-  return ["+", "-", "*", "/"].includes(char);
+  return ["+", "-", "*", "/", "."].includes(char);
 }
+
+const limpiar = () => {
+  operacion = "";
+  document.getElementById("idRes").innerHTML = operacion;
+};
