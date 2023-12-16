@@ -2,11 +2,11 @@ console.log("Elementos Vue");
 console.log(Vue);
 
 const estudiantes = [
-  { nombre: "Perico", apellido: "Palotes" },
-  { nombre: "Daniel", apellido: "Aquino" },
-  { nombre: "Alison", apellido: "Guzman" },
-  { nombre: "Tomas", apellido: "Guaman" },
-  { nombre: "Agustin", apellido: "Rea" },
+//   { nombre: "Perico", apellido: "Palotes" },
+//   { nombre: "Daniel", apellido: "Aquino" },
+//   { nombre: "Alison", apellido: "Guzman" },
+//   { nombre: "Tomas", apellido: "Guaman" },
+//   { nombre: "Agustin", apellido: "Rea" },
 ];
 
 const app = Vue.createApp({

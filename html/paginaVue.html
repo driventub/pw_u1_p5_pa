@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue con CDN</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    
   </head>
   <body>
     <header></header>
@@ -21,25 +20,29 @@
         <p>{{false ? 'Verdadero' : 'Falso'}}</p> -->
         <p>{{mensaje}}</p>
         <p>{{valor}}</p>
-        <button v-on:click="cambiar">Cambiar Mensaje</button>
-        <button v-on:click="sumar">Sumar</button>
-        <hr/>
+        <button @click="cambiar">Cambiar Mensaje</button>
+        <button @click="sumar">Sumar</button>
+        <hr />
         <p>{{lista}}</p>
-        <ul vfor>
-          <label for="idNombre">Nombre:</label>
-          <input v-model="nombre" id="idNombre" type="text">
-          <label for="idApellido">Apellido:</label>
-          <input  v-on:keypress="presionarTecla" v-model="apellido" id="idApellido" type="text">
-          <button @click="agregar" >Agregar</button>
-          {{nombre}}
 
-          <li v-for="({nombre,apellido}, index) in lista" :key="index">
-            {{index + 1}} : 
+        <label for="idNombre">Nombre:</label>
+        <input v-model="nombre" id="idNombre" type="text" />
+        <label for="idApellido">Apellido:</label>
+        <input
+          @keypress.enter="presionarTecla"
+          v-model="apellido"
+          id="idApellido"
+          type="text"
+        />
+        <button @click="agregar">Agregar</button>
+        {{nombre}}
+
+        <ul v-for="({nombre,apellido}, index) in lista" :key="index">
+          <li v-if="nombre != undefined && nombre != '' " >
+            <label v-show="false" for="">Nombre</label>
+            {{index + 1}} :
             <label id="{{index}}" for="">{{nombre}} => {{apellido}}</label>
-
             <button @click="quitar(index)">{{editar}}</button>
-            
-            
           </li>
         </ul>
       </div>
