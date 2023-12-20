@@ -1,49 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- ts -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue con CDN</title>
+    <title>Vue Form</title>
+    <link rel="stylesheet" href="../css/ejercicio.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link rel="stylesheet" href="../css/ejercicio.css">
   </head>
   <body>
-    <header></header>
-    <nav></nav>
-    <section>
-      <!-- <p>{{false ? 'Verdadero' : 'Falso'}}</p> -->
-      <div class="container">
-        <div class="form" id="myApp">
+    <header class="container">
+      <h1>Estudiante Vue</h1>
+    </header>
+    <div class="container" id="myApp">
+      <nav></nav>
+
+      <section>
+        <!-- deberia ser form, cambiare para evitar reload -->
+        <div class="form"  >
+          <h2>Nuevo Estudiante</h2>
           
-          
-          <label for="idNombre">Nombre:</label>
-          <input v-model="nombre" id="idNombre" type="text" />
-          <label for="idApellido">Apellido:</label>
-          <input
-          @keypress.enter="presionarTecla"
-          v-model="apellido"
-          id="idApellido"
-          type="text"
-          />
-          <button @click="agregar">Agregar</button>
-          {{nombre}}
-          
-          <ul v-for="({nombre,apellido}, index) in lista" :key="index">
-            <li v-if="nombre != undefined && nombre != '' " >
-              <label v-show="false" for="">Nombre</label>
-              {{index + 1}} :
-              <label id="{{index}}" for="">{{nombre}} => {{apellido}}</label>
-              <button @click="quitar(index)">{{editar}}</button>
-            </li>
-          </ul>
-          <p>{{lista}}</p>
-          </div>
-      </div>
-      
-      <!-- <h1>{{1+1}}</h1> -->
-      <script src="../js/ejercicio.js"></script>
-    </section>
-    <footer></footer>
+          <p type="Nombre: ">
+            <input v-model="nombre" type="text"  />
+          </p>
+          <p type="Apellido: ">
+            <input v-model="apellido" type="text" />
+          </p>
+          <p type="Edad: ">
+            <input v-model="edad" type="number" />
+          </p>
+          <p type="Genero: ">
+            <input v-model="genero" type="text" />
+          </p>
+          <p type="Pais: ">
+            <input v-model="pais" type="text" />
+          </p>
+
+          <div class="container" @click="agregar"><button>GUARDAR</button></div>
+        </div>
+
+        <div class="tabla">
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Genero</th>
+                <th>Pais</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(estu, index) in lista" :key="index">
+                <td>{{index + 1}}</td>
+                <td>{{estu.nombre}}</td>
+                <td>{{estu.apellido}}</td>
+                <td>{{estu.edad}}</td>
+                <td>{{estu.genero}}</td>
+                <td>{{estu.pais}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </section>
+      <footer></footer>
+    </div>
+    <script src="../js/ejercicio.js"></script>
   </body>
 </html>

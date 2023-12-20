@@ -65,7 +65,7 @@ input:hover{
 
 button {
   border-radius: 8px;
-  box-shadow: 1px 3px 3px 3px;
+  /* box-shadow: 1px 3px 3px 3px; */
   cursor: pointer;
   background-color: #00b4d8;
   color: #caf0f8;
