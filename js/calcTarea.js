@@ -4,6 +4,7 @@ function agregarNumero(valor) {
   console.log(valor);
   console.log(operacion);
   operacion = operacion.concat(valor);
+  document.getElementById("idRes").innerHTML = operacion;
 }
 
 function agregarSigno(valor) {
@@ -15,6 +16,8 @@ function agregarSigno(valor) {
   }
 
   operacion = operacion.concat(valor);
+
+  document.getElementById("idRes").innerHTML = operacion;
 }
 
 function resultado() {
@@ -33,5 +36,5 @@ function resultado() {
 }
 
 function chequear(char) {
-  return ["+", "-", "*", "/"].includes(char);
+  return ["+", "-", "*", "/", "."].includes(char);
 }
